@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getRecipeById, getAllRecipes } from '@/lib/recipes';
+import { getRecipeById, getAllRecipes, getRecipeVariants, getBaseTitle, hasVariants } from '@/lib/recipes';
 import RecipeImage from '@/components/RecipeImage';
+import RecipeVariants from '@/components/RecipeVariants';
 
 function getAuthorDisplayName(author: string): string {
   switch (author) {
@@ -65,10 +66,20 @@ export default async function RecipePage({ params }: RecipePageProps) {
         {/* Obrázek */}
         <RecipeImage recipe={recipe} />
         
+        {/* Varianty */}
+        {hasVariants(recipe) && (
+          <RecipeVariants variants={getRecipeVariants(recipe)} currentId={id} />
+        )}
+        
         {/* Hlavní informace */}
         <header className="mb-8">
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-            {recipe.title}
+            {hasVariants(recipe) ? getBaseTitle(recipe.title) : recipe.title}
+            {hasVariants(recipe) && (
+              <span className="ml-3 text-2xl text-zinc-500 dark:text-zinc-400">
+                {recipe.title.match(/varianta\s*(\d+)/i)?.[0]}
+              </span>
+            )}
           </h1>
           
           {recipe.description && (

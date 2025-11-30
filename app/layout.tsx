@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Rodinný archiv receptů",
-  description: "Recepty od maminky a babičkxxy",
+  description: "",
 };
 
 export default function RootLayout({

@@ -46,3 +46,4 @@ export default function RecipeImage({ recipe }: RecipeImageProps) {
   );
 }
 
+

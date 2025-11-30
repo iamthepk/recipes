@@ -87,3 +87,37 @@ export function getAllCategories(): RecipeCategory[] {
   return Array.from(categories).sort();
 }
 
+// Získání základního názvu receptu (bez "varianta X")
+export function getBaseTitle(title: string): string {
+  // Odstranit " - varianta X" nebo podobné varianty
+  return title.replace(/\s*-\s*varianta\s*\d+.*$/i, '').trim();
+}
+
+// Najít všechny varianty receptu podle základního názvu
+export function getRecipeVariants(recipe: Recipe): Recipe[] {
+  const baseTitle = getBaseTitle(recipe.title);
+  return getAllRecipes().filter(r => getBaseTitle(r.title) === baseTitle);
+}
+
+// Seskupit recepty - zobrazit jen jeden z každé skupiny variant
+export function getGroupedRecipes(): Recipe[] {
+  const allRecipes = getAllRecipes();
+  const grouped = new Map<string, Recipe>();
+  
+  allRecipes.forEach(recipe => {
+    const baseTitle = getBaseTitle(recipe.title);
+    // Pokud ještě nemáme recept s tímto základním názvem, přidáme první
+    if (!grouped.has(baseTitle)) {
+      grouped.set(baseTitle, recipe);
+    }
+  });
+  
+  return Array.from(grouped.values());
+}
+
+// Zkontrolovat, zda má recept varianty
+export function hasVariants(recipe: Recipe): boolean {
+  const variants = getRecipeVariants(recipe);
+  return variants.length > 1;
+}
+

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Recipe } from '@/types/recipe';
 import { getRecipeImage } from '@/lib/image-utils';
+import { hasVariants, getRecipeVariants, getBaseTitle } from '@/lib/recipes';
 
 function getAuthorDisplayName(author: string): string {
   switch (author) {
@@ -63,7 +64,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
         </div>
         <div className="p-6">
           <h2 className="mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-            {recipe.title}
+            {hasVariants(recipe) ? getBaseTitle(recipe.title) : recipe.title}
           </h2>
           {recipe.description && (
             <p className="mb-4 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -80,11 +81,18 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
               </span>
             ))}
           </div>
-          {recipe.author && (
-            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-500">
-              od {getAuthorDisplayName(recipe.author)}
-            </p>
-          )}
+          <div className="mt-4 flex items-center justify-between">
+            {recipe.author && (
+              <p className="text-xs text-zinc-500 dark:text-zinc-500">
+                od {getAuthorDisplayName(recipe.author)}
+              </p>
+            )}
+            {hasVariants(recipe) && (
+              <span className="text-xs text-zinc-500 dark:text-zinc-500">
+                {getRecipeVariants(recipe).length} variant
+              </span>
+            )}
+          </div>
         </div>
       </article>
     </Link>

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RecipeCategory } from '@/types/recipe';
-import { getAllRecipes, getAllCategories, filterRecipes } from '@/lib/recipes';
+import { getAllCategories, filterRecipes, getBaseTitle } from '@/lib/recipes';
 import RecipeCard from '@/components/RecipeCard';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
@@ -11,11 +11,25 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<RecipeCategory[]>([]);
   
-  const allRecipes = getAllRecipes();
   const allCategories = getAllCategories();
   
   const filteredRecipes = useMemo(() => {
-    return filterRecipes(searchQuery, selectedCategories);
+    let results = filterRecipes(searchQuery, selectedCategories);
+    
+    // Pokud není vyhledávání, seskupit varianty
+    if (!searchQuery.trim() && selectedCategories.length === 0) {
+      // Seskupit podle základního názvu
+      const grouped = new Map<string, typeof results[0]>();
+      results.forEach(recipe => {
+        const baseTitle = getBaseTitle(recipe.title);
+        if (!grouped.has(baseTitle)) {
+          grouped.set(baseTitle, recipe);
+        }
+      });
+      results = Array.from(grouped.values());
+    }
+    
+    return results;
   }, [searchQuery, selectedCategories]);
   
   const handleToggleCategory = (category: RecipeCategory) => {
@@ -41,9 +55,6 @@ export default function Home() {
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
             Rodinný archiv receptů
           </h1>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400">
-            Recepty od maminky a babičky
-          </p>
         </header>
         
         {/* Vyhledávání a filtry */}
