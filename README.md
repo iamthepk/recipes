@@ -149,6 +149,17 @@ Aplikace poběží na [http://localhost:3000](http://localhost:3000)
 2. Připojte repozitář k Vercel
 3. Vercel automaticky detekuje Next.js a nasadí aplikaci
 
+### Konfigurace pro přidávání receptů přes web
+
+Pro funkčnost přidávání receptů přes webové rozhraní na Vercelu je potřeba nastavit následující environment variables v nastavení projektu na Vercelu:
+
+- `GITHUB_OWNER` - Váš GitHub username nebo organizace (např. "vase-username")
+- `GITHUB_REPO` - Název repozitáře (např. "recipes")
+- `GITHUB_TOKEN` - GitHub Personal Access Token s oprávněním `repo` (vytvořte na https://github.com/settings/tokens)
+- `GITHUB_BRANCH` - Větev, do které se mají ukládat změny (výchozí: "main")
+
+**Bez těchto proměnných bude přidávání receptů fungovat pouze lokálně.**
+
 ## Funkce
 
 - ✅ Vyhledávání receptů podle názvu

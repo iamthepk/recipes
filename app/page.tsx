@@ -7,11 +7,14 @@ import RecipeCard from '@/components/RecipeCard';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
 import RecipeModal from '@/components/RecipeModal';
+import AddRecipeModal from '@/components/AddRecipeModal';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<RecipeCategory[]>([]);
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
   
   const allCategories = getAllCategories();
 
@@ -86,15 +89,32 @@ export default function Home() {
       window.history.pushState({}, '', `?recipe=${variantId}`);
     }
   };
+
+  const handleRecipeAdded = () => {
+    // Refresh stránky pro načtení nových receptů
+    setRefreshKey(prev => prev + 1);
+    window.location.reload();
+  };
   
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-            Rodinný archiv receptů
-          </h1>
+          <div className="mb-4 flex items-center justify-between">
+            <div className="flex-1" />
+            <h1 className="flex-1 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
+              Rodinný archiv receptů
+            </h1>
+            <div className="flex flex-1 justify-end">
+              <button
+                onClick={() => setIsAddModalOpen(true)}
+                className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              >
+                + Přidat recept
+              </button>
+            </div>
+          </div>
         </header>
         
         {/* Vyhledávání a filtry */}
@@ -157,6 +177,13 @@ export default function Home() {
         recipe={selectedRecipe} 
         onClose={handleCloseModal}
         onVariantChange={handleVariantChange}
+      />
+
+      {/* Modal pro přidání receptu */}
+      <AddRecipeModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onSuccess={handleRecipeAdded}
       />
     </div>
   );
