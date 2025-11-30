@@ -123,7 +123,189 @@
       "1/2 prášku do pečiva",
       "čokoládová poleva na povrch"
     ]
+  },
+  {
+    "id": "kokosove-rezy",
+    "title": "Kokosové řezy (buchta)",
+    "image": "default-image.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500g hladká mouka",
+      "300g cukr",
+      "150g máslo",
+      "100g strouhaný kokos",
+      "250ml mléko",
+      "1ks prášek do pečiva",
+      "3ks vejce"
+    ]
+  },
+  {
+    "id": "tvarohove-koblihy",
+    "title": "Tvarohové koblihy",
+    "image": "tvarohovekoblihy.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "300g polohrubá mouka",
+      "250g měkký tvaroh",
+      "4ks vejce",
+      "45ml mléko",
+      "45ml tuk",
+      "1ks prášek do pečiva"
+    ]
+  },
+  {
+    "id": "buchta-se-slehackou",
+    "title": "Buchta se šlehačkou",
+    "image": "default-image.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "250g cukr",
+      "3ks vejce",
+      "1ks šlehačka",
+      "500g hladká mouka",
+      "1ks prášek do pečiva"
+    ]
+  },
+  {
+    "id": "makovec",
+    "title": "Makovec",
+    "image": "makovec.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500g polohrubá mouka",
+      "500g cukr",
+      "300-400g mletý mák",
+      "500ml mléko",
+      "1ks Hera",
+      "4ks vejce",
+      "1-2ks prášek do pečiva"
+    ]
+  },
+  {
+    "id": "ryzovy-nakyp",
+    "title": "Rýžový nákyp s broskvemi",
+    "image": "ryzovynakypsbroskvemi.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "180g rýže",
+      "500ml mléka",
+      "200ml vody",
+      "50g cukru",
+      "40g tuku",
+      "3ks žloutky",
+      "špetka soli",
+      "rozinky",
+      "1ks vanilinový cukr",
+      "4-5ks broskví",
+      "3ks bílky - sníh"
+    ],
+    "instructions": [
+      "Rýži vaříme v mléku a vodě dokud nevznikne kaše",
+      "Mezitím utřeme tuk s cukrem a žloutky",
+      "Do vzniklé pěny přidáme vychladlou rýžovou kaši a přidáme hrst rozinek, špetku soli, vanilinový cukr, 4-5 broskví nakrájených na malé kousky a snih ze 3 bílků",
+      "Směs nalijeme do tukem vymazané formy a pečeme do růžova",
+      "Před upečením můžeme přidat navrch celé broskve"
+    ],
+    "prepTime": 0,
+    "cookTime": 0,
+    "servings": 0
+  },
+  {
+    "id": "svatebni-kolacky",
+    "title": "Svatební koláčky",
+    "image": "svatebnikolacky.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500g polohrubá mouka",
+      "2ks žloutky",
+      "1ks vanilinový cukr",
+      "1 malá lžička soli",
+      "250g Omega (nastrouhat)",
+      "80g droždí"
+    ]
+  },
+  {
+    "id": "livanecky",
+    "title": "Lívanečky",
+    "image": "livanecky.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "225g polohrubé mouky",
+      "3 lžičky prášku do pečiva",
+      "špetka soli",
+      "25g cukru",
+      "150ml mléka",
+      "50g másla"
+    ]
+  },
+  {
+    "id": "kremrole",
+    "title": "Kremrole",
+    "image": "kremrole.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "375g hladké mouky",
+      "1ks smetana",
+      "1ks máslo"
+    ]
+  },
+  {
+    "id": "vyborna-babovka",
+    "title": "Výborná bábovka",
+    "image": "vybornababovka.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "250 g másla (utřít s cukrem do pěny)",
+      "300 g cukru",
+      "6 žloutků",
+      "citronová kůra (nastrouhat)",
+      "šťáva z 1/2 citronu",
+      "450g polohrubé mouky",
+      "1ks vanilinový pudink",
+      "1ks prášek do pečiva",
+      "250 ml mléka",
+      "sníh ze 6 bílků"
+    ]
+  },
+  {
+    "id": "tribarevny-kolac",
+    "title": "Tříbarevný koláč",
+    "image": "tribarevnykolac.webp",
+    "categories": ["sladké", "buchta"],
+    "ingredientGroups": [
+      {
+        "name": "Spodní vrstva",
+        "items": [
+          "1 vejce",
+          "100g cukru",
+          "200g hladké mouky",
+          "1 lžíce kakaa",
+          "1 prášek do pečiva",
+          "200 g tuku"
+        ]
+      },
+      {
+        "name": "Střední vrstva",
+        "items": [
+          "tvaroh"
+        ]
+      },
+      {
+        "name": "Vrchní vrstva",
+        "items": [
+          "3 žloutky",
+          "100ml oleje",
+          "100ml vody",
+          "200g cukru",
+          "200g hladké mouky",
+          "0,5ks prášek do pečiva",
+          "3ks bílky - sníh"
+        ]
+      }
+    ]
   }
+  
+  
   
   
 

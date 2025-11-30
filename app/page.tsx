@@ -1,17 +1,33 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { RecipeCategory } from '@/types/recipe';
-import { getAllCategories, filterRecipes, getBaseTitle } from '@/lib/recipes';
+import { useState, useMemo, useEffect } from 'react';
+import { RecipeCategory, Recipe } from '@/types/recipe';
+import { getAllCategories, filterRecipes, getBaseTitle, getRecipeById } from '@/lib/recipes';
 import RecipeCard from '@/components/RecipeCard';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
+import RecipeModal from '@/components/RecipeModal';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<RecipeCategory[]>([]);
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   
   const allCategories = getAllCategories();
+
+  // Načíst recept z URL parametru při načtení stránky
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const recipeId = params.get('recipe');
+      if (recipeId) {
+        const recipe = getRecipeById(recipeId);
+        if (recipe) {
+          setSelectedRecipe(recipe);
+        }
+      }
+    }
+  }, []);
   
   const filteredRecipes = useMemo(() => {
     let results = filterRecipes(searchQuery, selectedCategories);
@@ -46,6 +62,30 @@ export default function Home() {
   };
   
   const hasActiveFilters = searchQuery.trim() !== '' || selectedCategories.length > 0;
+  
+  const handleRecipeClick = (recipeId: string) => {
+    const recipe = getRecipeById(recipeId);
+    if (recipe) {
+      setSelectedRecipe(recipe);
+      // Aktualizovat URL bez reloadu
+      window.history.pushState({}, '', `?recipe=${recipeId}`);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setSelectedRecipe(null);
+    // Vyčistit URL parametr
+    window.history.pushState({}, '', window.location.pathname);
+  };
+
+  const handleVariantChange = (variantId: string) => {
+    const variant = getRecipeById(variantId);
+    if (variant) {
+      setSelectedRecipe(variant);
+      // Aktualizovat URL bez reloadu
+      window.history.pushState({}, '', `?recipe=${variantId}`);
+    }
+  };
   
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -102,11 +142,22 @@ export default function Home() {
         {filteredRecipes.length > 0 && (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filteredRecipes.map((recipe) => (
-              <RecipeCard key={recipe.id} recipe={recipe} />
+              <RecipeCard 
+                key={recipe.id} 
+                recipe={recipe} 
+                onClick={() => handleRecipeClick(recipe.id)}
+              />
             ))}
           </div>
         )}
       </main>
+
+      {/* Modal s detailem receptu */}
+      <RecipeModal 
+        recipe={selectedRecipe} 
+        onClose={handleCloseModal}
+        onVariantChange={handleVariantChange}
+      />
     </div>
   );
 }

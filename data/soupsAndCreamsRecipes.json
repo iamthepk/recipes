@@ -1,0 +1,46 @@
+[
+  {
+    "id": "priklad-polevka",
+    "title": "Příklad polévky",
+    "description": "Toto je ukázková polévka",
+    "categories": ["polévky"],
+    "ingredients": [
+      "1l vody",
+      "500g zeleniny",
+      "sůl",
+      "pepř"
+    ],
+    "instructions": [
+      "Uvařit vodu",
+      "Přidat zeleninu",
+      "Ochutit solí a pepřem",
+      "Vařit 20 minut"
+    ],
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "author": "maminka"
+  },
+  {
+    "id": "priklad-krem",
+    "title": "Příklad krému",
+    "description": "Toto je ukázkový krém",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500ml mléka",
+      "100g cukru",
+      "2 vejce",
+      "vanilkový cukr"
+    ],
+    "instructions": [
+      "Zahřát mléko",
+      "Přidat cukr a vejce",
+      "Vařit do zhoustnutí"
+    ],
+    "prepTime": 5,
+    "cookTime": 15,
+    "servings": 6,
+    "author": "babička"
+  }
+]
+

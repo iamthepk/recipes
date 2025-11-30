@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { Recipe } from '@/types/recipe';
 import { getRecipeImage } from '@/lib/image-utils';
@@ -22,16 +21,18 @@ function getAuthorDisplayName(author: string): string {
 
 interface RecipeCardProps {
   recipe: Recipe;
+  onClick: () => void;
 }
 
-export default function RecipeCard({ recipe }: RecipeCardProps) {
+export default function RecipeCard({ recipe, onClick }: RecipeCardProps) {
   const [imageError, setImageError] = useState(false);
   const imageSrc = getRecipeImage(recipe.image);
   
   return (
-    <Link 
-      href={`/recept/${recipe.id}`}
-      className="group block"
+    <button
+      onClick={onClick}
+      className="group block w-full cursor-pointer text-left"
+      type="button"
     >
       <article className="overflow-hidden rounded-lg border border-zinc-200 bg-white transition-all hover:border-zinc-300 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700">
         <div className="relative aspect-4/3 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
@@ -95,7 +96,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           </div>
         </div>
       </article>
-    </Link>
+    </button>
   );
 }
 

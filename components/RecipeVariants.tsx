@@ -1,18 +1,14 @@
 'use client';
 
-import Link from 'next/link';
 import { Recipe } from '@/types/recipe';
-import { usePathname } from 'next/navigation';
 
 interface RecipeVariantsProps {
   variants: Recipe[];
   currentId: string;
+  onVariantChange: (variantId: string) => void;
 }
 
-export default function RecipeVariants({ variants, currentId }: RecipeVariantsProps) {
-  const pathname = usePathname();
-  const basePath = pathname.split('/').slice(0, -1).join('/');
-  
+export default function RecipeVariants({ variants, currentId, onVariantChange }: RecipeVariantsProps) {
   if (variants.length <= 1) return null;
   
   return (
@@ -24,9 +20,9 @@ export default function RecipeVariants({ variants, currentId }: RecipeVariantsPr
         {variants.map((variant) => {
           const isActive = variant.id === currentId;
           return (
-            <Link
+            <button
               key={variant.id}
-              href={`/recept/${variant.id}`}
+              onClick={() => onVariantChange(variant.id)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 isActive
                   ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
@@ -36,7 +32,7 @@ export default function RecipeVariants({ variants, currentId }: RecipeVariantsPr
               {variant.title.match(/varianta\s*(\d+)/i) 
                 ? `Varianta ${variant.title.match(/varianta\s*(\d+)/i)?.[1]}`
                 : variant.title}
-            </Link>
+            </button>
           );
         })}
       </div>

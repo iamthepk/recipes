@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getRecipeById, getAllRecipes, getRecipeVariants, getBaseTitle, hasVariants } from '@/lib/recipes';
+import { getIngredientGroups } from '@/lib/recipe-utils';
 import RecipeImage from '@/components/RecipeImage';
 import RecipeVariants from '@/components/RecipeVariants';
 
@@ -137,24 +138,40 @@ export default async function RecipePage({ params }: RecipePageProps) {
         </header>
         
         {/* Ingredience */}
-        {recipe.ingredients && recipe.ingredients.length > 0 && (
-          <section className="mb-12">
-            <h2 className="mb-4 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
-              Ingredience
-            </h2>
-            <ul className="space-y-2">
-              {recipe.ingredients.map((ingredient, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-zinc-700 dark:text-zinc-300"
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-500" />
-                  <span>{ingredient}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {(() => {
+          const ingredientGroups = getIngredientGroups(recipe);
+          if (ingredientGroups.length === 0) return null;
+          
+          return (
+            <section className="mb-12">
+              <h2 className="mb-4 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+                Ingredience
+              </h2>
+              <div className="space-y-6">
+                {ingredientGroups.map((group, groupIndex) => (
+                  <div key={groupIndex}>
+                    {group.name && (
+                      <h3 className="mb-2 text-lg font-medium text-zinc-800 dark:text-zinc-200">
+                        {group.name}
+                      </h3>
+                    )}
+                    <ul className="space-y-2">
+                      {group.items.map((ingredient, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-3 text-zinc-700 dark:text-zinc-300"
+                        >
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-500" />
+                          <span>{ingredient}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
         
         {/* Postup */}
         {recipe.instructions && recipe.instructions.length > 0 && (

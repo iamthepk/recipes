@@ -3,7 +3,7 @@
     "id": "priklad-vanocni",
     "title": "Příklad vánočního receptu",
     "categories": ["sladké", "cukroví", "vánoční"],
-    "image": "xxx.webp",
+    "image": "default-image.webp",
     "ingredients": [
       "500g hladké mouky",
       "250g másla",

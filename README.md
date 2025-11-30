@@ -23,7 +23,8 @@ recipes/
 ├── data/                  # Data receptů (JSON soubory podle kategorií)
 │   ├── saltyRecipes.json  # Slané recepty
 │   ├── sweetRecipes.json  # Sladké recepty
-│   └── christmasRecipes.json # Vánoční recepty
+│   ├── christmasRecipes.json # Vánoční recepty
+│   └── soupsAndCreamsRecipes.json # Polévky a krémy
 ├── lib/                   # Utility funkce
 │   └── recipes.ts         # Funkce pro práci s recepty
 ├── types/                 # TypeScript typy
@@ -49,7 +50,8 @@ Recepty jsou rozděleny do více JSON souborů podle kategorií. Vyberte správn
 - **`data/saltyRecipes.json`** - pro slané recepty
 - **`data/sweetRecipes.json`** - pro sladké recepty
 - **`data/christmasRecipes.json`** - pro vánoční recepty
-- Můžete vytvořit další soubory podle potřeby (např. `data/cakesRecipes.json`, `data/soupsRecipes.json`)
+- **`data/soupsAndCreamsRecipes.json`** - pro polévky a krémy
+- Můžete vytvořit další soubory podle potřeby (např. `data/cakesRecipes.json`)
 
 **Důležité:** Po vytvoření nového JSON souboru musíte přidat import v souboru `lib/recipes.ts`:
 
@@ -77,6 +79,17 @@ Každý recept má následující strukturu:
     "500g hladké mouky",
     "250ml mléka"
   ],
+  // NEBO pro více skupin ingrediencí použijte:
+  // "ingredientGroups": [
+  //   {
+  //     "name": "Těsto",
+  //     "items": ["500g mouky", "250ml mléka"]
+  //   },
+  //   {
+  //     "name": "Náplň",
+  //     "items": ["500g tvarohu", "2 vejce"]
+  //   }
+  // ],
   "instructions": [
     "První krok",
     "Druhý krok"
