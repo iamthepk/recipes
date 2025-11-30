@@ -303,6 +303,41 @@
         ]
       }
     ]
+  },
+  {
+    "id": "bebe-rezy",
+    "title": "Bebe řezy",
+    "image": "beberezy.webp",
+    "categories": ["sladké", "buchta"],
+    "ingredientGroups": [
+      {
+        "name": "Piškotový základ - nízký na plech",
+        "items": [
+          "4 vejce",
+          "60g cukru",
+          "35g polohrubé mouky"
+
+        ]
+      },
+      {
+        "name": "Pudinková vrstva",
+        "items": [
+          "1l mléka",
+          "3ks vanilinový cukr",
+          "3ks vanilinový pudink",
+          "1ks prášek do pečiva",
+          "45g cukru",
+          "3 lžíce rumu",
+          "125g másla"
+        ]
+      },
+      {
+        "name": "Vrchní vrstva",
+        "items": [
+          "bebé sušenky a čokoládová poleva"
+        ]
+      }
+    ]
   }
   
   
