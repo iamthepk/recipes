@@ -1,0 +1,136 @@
+[
+  {
+    "id": "makove-rohlicky",
+    "title": "Makové rohlíčky",
+    "image": "makoverohlicky.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500g hladké mouky",
+      "1 šlehačka",
+      "1 hera"
+    ],
+    "instructions": [
+      "Zadělat těsto",
+      "Naplnit makovou nádivkou",
+      "Upéct v troubě a teplé obalit v cukru"
+    ],
+    "prepTime": 0,
+    "cookTime": 0,
+    "servings": 0,
+    "author": "babička"
+  },
+  {
+    "id": "tvarohove-rohlicky",
+    "title": "Tvarohové rohlíčky",
+    "image": "tvarohoverohlicky.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500g polohrubé mouky",
+      "500g másla/hera",
+      "2ks vejce",
+      "1ks vanilinový cukr",
+      "citrónová kůra",
+      "360ml mléko",
+      "12g droždí"
+    ],
+    "instructions": [
+      "Zadělat těsto",
+      "Upéct v troubě a teplé obalit v cukru"
+    ],
+    "prepTime": 0,
+    "cookTime": 0,
+    "servings": 0,
+    "author": "sousedka"
+  },
+  {
+    "id": "strudl-1",
+    "title": "Štrúdl - varianta 1",
+    "image": "strudl.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "1 bílý jogurt nebo zakysaná smetana",
+      "650 g polohrubé mouky",
+      "1 vejce",
+      "1 prášek do pečiva",
+      "1 Hera"
+    ]
+  },
+  {
+    "id": "strudl-2",
+    "title": "Štrúdl - varianta 2",
+    "image": "strudl.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "300 g hladké mouky",
+      "1 ks 100% tuku",
+      "1 vejce",
+      "8 lžic vlažné vody",
+      "špetka soli"
+    ]
+  },
+  {
+    "id": "strudl-3",
+    "title": "Štrúdl - varianta 3",
+    "image": "strudl.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "400 g hladké mouky",
+      "1 vejce",
+      "1 Hera",
+      "2 lžíce octa",
+      "4 lžíce mléka",
+      "1/2 prášku do pečiva"
+    ]
+  },
+  {
+    "id": "strudl-4",
+    "title": "Štrúdl - varianta 4",
+    "image": "strudl.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "500 g polohrubé mouky",
+      "1 bílý jogurt",
+      "1 Hera"
+    ]
+  },
+  {
+    "id": "kolace",
+    "title": "Koláče",
+    "image": "kolace.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "1 kg hladké mouky",
+      "200 g tuku",
+      "100 g cukru",
+      "3 žloutky",
+      "droždí (množství neuvedeno)",
+      "špetka soli",
+      "vanilkový cukr"
+    ]
+  },
+  {
+    "id": "orechove-rezy",
+    "title": "Ořechové řezy",
+    "image": "orechoverezy.webp",
+    "categories": ["sladké"],
+    "ingredients": [
+      "250 g tuku",
+      "250 g cukru",
+      "250 g mletých ořechů",
+      "250 g hladké mouky",
+      "1 vejce",
+      "3 lžíce mléka",
+      "1/2 prášku do pečiva",
+      "čokoládová poleva na povrch"
+    ]
+  }
+  
+  
+
+
+
+
+
+
+]
+

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "priklad-vanocni",
+    "title": "Příklad vánočního receptu",
+    "categories": ["sladké", "cukroví", "vánoční"],
+    "image": "xxx.webp",
+    "ingredients": [
+      "500g hladké mouky",
+      "250g másla",
+      "200g cukru"
+    ],
+    "instructions": [
+      "Smíchat ingredience",
+      "Vykrájet tvary",
+      "Upéct"
+    ],
+    "prepTime": 60,
+    "cookTime": 15,
+    "servings": 50,
+    "author": "babička"
+  }
+]
+

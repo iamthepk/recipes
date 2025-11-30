@@ -1,0 +1,25 @@
+[
+  {
+    "id": "syrove-tycinky",
+    "title": "Sýrové tyčinky",
+    "categories": ["slané", "snack"],
+    "image": "syrovetycinky.webp",
+    "ingredients": [
+      "200g hladká mouka",
+      "120g máslo",
+      "100g strouhaný sýr",
+      "1ks žloutek",
+      "1 KL sádlo"
+    ],
+    "instructions": [
+      "Vše prodělat, vyválet na tlouštku asi 3 mm.",
+      "Potřít bílkem, posolit, posypat strouhaným sýrem.",
+      "Udělat tyčinky a upéct dozlatova."
+    ],
+    "prepTime": 0,
+    "cookTime": 0,
+    "servings": 0,
+    "author": "babička"
+  }
+]
+
