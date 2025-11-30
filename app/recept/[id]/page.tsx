@@ -69,7 +69,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
         
         {/* Varianty */}
         {hasVariants(recipe) && (
-          <RecipeVariants variants={getRecipeVariants(recipe)} currentId={id} />
+          <RecipeVariants variants={getRecipeVariants(recipe)} currentId={id} basePath="/recept" />
         )}
         
         {/* Hlavní informace */}
