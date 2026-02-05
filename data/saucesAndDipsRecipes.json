@@ -1,0 +1,29 @@
+[
+  {
+    "id": "sushi-mayo",
+    "title": "Sushi majonéza",
+    "description": "Základní bílá omáčka na sushi.",
+    "categories": ["omáčky", "dipy"],
+    "image": "sushimajoneza.webp",
+    "ingredients": [
+      "200 g majonézy",
+      "10 g světlé sójové omáčky",
+      "5 g sezamového oleje",
+      "8–10 g cukru",
+      "10–15 g vody"
+    ],
+    "instructions": [
+      "Cukr rozmíchej ve vodě, dokud se úplně nerozpustí.",
+      "Přidej majonézu a dobře promíchej do hladka.",
+      "Vmíchej sójovou omáčku a sezamový olej.",
+      "Podle chuti můžeš přidat i trochu chilli (např. chilli omáčku nebo špetku mletého chilli), aby byla omáčka více spicy.",
+      "Ochutnej a případně doladť množství cukru nebo vody podle požadované hustoty a sladkosti.",
+      "Omáčku podávej jako základní bílou omáčku k sushi nebo jako dip."
+    ],
+    "prepTime": 5,
+    "cookTime": 0,
+    "servings": 4,
+    "author": "maminka"
+  }
+]
+

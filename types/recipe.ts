@@ -8,6 +8,8 @@ export type RecipeCategory =
   | 'polévky'
   | 'hlavní jídla'
   | 'saláty'
+  | 'omáčky'
+  | 'dipy'
   | 'nápoje';
 
 export interface IngredientGroup {

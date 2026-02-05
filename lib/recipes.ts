@@ -4,6 +4,7 @@ import saltyRecipes from '@/data/saltyRecipes.json';
 import sweetRecipes from '@/data/sweetRecipes.json';
 import christmasRecipes from '@/data/christmasRecipes.json';
 import soupsAndCreamsRecipes from '@/data/soupsAndCreamsRecipes.json';
+import saucesAndDipsRecipes from '@/data/saucesAndDipsRecipes.json';
 // Pokud existuje původní recipes.json, můžete ho také importovat
 // import recipesData from '@/data/recipes.json';
 
@@ -26,6 +27,10 @@ export function getAllRecipes(): Recipe[] {
   
   if (Array.isArray(soupsAndCreamsRecipes)) {
     allRecipes.push(...(soupsAndCreamsRecipes as Recipe[]));
+  }
+  
+  if (Array.isArray(saucesAndDipsRecipes)) {
+    allRecipes.push(...(saucesAndDipsRecipes as Recipe[]));
   }
   
   // Pokud chcete zachovat původní recipes.json, odkomentujte:
@@ -125,4 +130,3 @@ export function hasVariants(recipe: Recipe): boolean {
   const variants = getRecipeVariants(recipe);
   return variants.length > 1;
 }
-
