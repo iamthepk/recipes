@@ -20,6 +20,174 @@
     "cookTime": 0,
     "servings": 0,
     "author": "babička"
+  },
+  {
+    "id": "zitno-psenicne-spicky",
+    "title": "Žitno-pšeničné špičky",
+    "categories": ["slané"],
+    "image": "default-image.webp",
+    "ingredients": [
+      "240 g vody",
+      "1 lžička medu",
+      "10 g čerstvého droždí",
+      "240 g hladké pšeničné mouky",
+      "260 g žitné chlebové mouky",
+      "100 g kefíru",
+      "1 polévková lžíce oleje",
+      "2 rovné lžičky soli",
+      "trochu drceného kmínu (podle chuti)"
+    ],
+    "instructions": [
+      "Aby drožďové těsto s převahou žita dobře prokvasilo a pečivo bylo dostatečně nakynuté, je vhodné zadělat ho na kvásek (omládek): Z přichystaných surovin odvážíme 100 g vody, přidáme med, droždí a 130 g hladké mouky. Dobře promícháme a zakryté necháme 60 minut kynout.",
+      "K hotovému kvásku přidáme zbytek surovin a uhněteme těsto, seškrábneme ho ze stěn mísy a shrneme k sobě. Mísu zakryjeme a těsto necháme asi hodinu kynout.",
+      "Po hodině těsto vyškrábneme z mísy na lehce pomoučený stůl, zlehka propracujeme a rozdělíme na 8–10 kousků. Chová se jako měkká plastelína – lepí se k sobě, ale na pomoučené prsty se nechytá. Z každého kousku uděláme bulku a přitom se snažíme nezapracovávat do těsta další mouku navíc.",
+      "Všechny bulky rukou rozválíme na kratší válečky se špičatými konci a uložíme je kynout na plech s pečicím papírem nebo fólií (asi 45–60 minut).",
+      "Troubu rozehřejeme na 230 °C, bulky nařízneme, postříkáme vodou z rozprašovače a dáme péct. Po 3–5 minutách teplotu snížíme na 210 °C a špičky dopečeme (asi 20–25 minut, celková doba pečení je přibližně 30 minut).",
+      "Těsto je vlastně velice podobné těstu chlebovému, a proto se dobře tvaruje a drží tvar. Můžete z něj upéct buď několik kusů dalamánků, nebo z celého těsta bochník chleba. Jen doba pečení se u chleba prodlouží (asi 45–50 minut)."
+    ],
+    "prepTime": 30,
+    "cookTime": 30,
+    "servings": 8,
+    "author": ""
+  },
+  {
+    "id": "bleskove-rohliky",
+    "title": "Bleskové rohlíky",
+    "categories": ["slané"],
+    "image": "default-image.webp",
+    "ingredients": [
+      "200 g vody",
+      "necelá rovná lžička cukru",
+      "18–21 g čerstvého droždí",
+      "360 g hladké mouky",
+      "25 g změklého másla nebo sádla",
+      "1 lžička soli",
+      "vejce (nebo jen voda) – na potření",
+      "lněná semínka – na posyp"
+    ],
+    "instructions": [
+      "Ve vlažné vodě rozmícháme cukr a droždí a necháme 15 minut odpočinout. Přidáme zbytek surovin a uhněteme těsto.",
+      "Ihned po uhnětení těsto rozdělíme napůl a z každé poloviny vytvarujeme velkou bulku. Obě bulky rozválíme do tvaru kruhu a každý z nich rozdělíme na 6 výsečí (celkem tedy 12).",
+      "Ze všech trojúhelníků těsta smotáme rohlíky. Cíp přitom popotahujeme směrem od sebe, aby bylo více namotáno.",
+      "Všechny rohlíky uložíme na plech s pečicím papírem nebo fólií a necháme 15 minut odpočinout.",
+      "Potřeme vejcem nebo jen vodou, posypeme semínky a upečeme ve vyhřáté troubě (230 °C / 13–17 minut)."
+    ],
+    "prepTime": 25,
+    "cookTime": 15,
+    "servings": 12,
+    "author": ""
+  },
+  {
+    "id": "horecka-sobotni-noci",
+    "title": "Horečka sobotní noci",
+    "categories": ["slané"],
+    "image": "default-image.webp",
+    "ingredientGroups": [
+      {
+        "name": "Rozkvas",
+        "items": [
+          "1 lžička žitného kvásku",
+          "70 g vody",
+          "70 g žitné mouky – mix celozrnné a chlebové"
+        ]
+      },
+      {
+        "name": "Zápara",
+        "items": [
+          "40 g ovesných vloček",
+          "20 g slunečnicových semínek",
+          "20 g lněného semínka",
+          "120 g ohřáté vody (55–60 °C)"
+        ]
+      },
+      {
+        "name": "Dále potřebujeme",
+        "items": [
+          "280 g mouky – 150 g pšeničné chlebové, 100 g pšeničné, 30 g špaldové celozrnné",
+          "150–180 g kefíru",
+          "1 lžička soli",
+          "½ lžičky kmínu"
+        ]
+      }
+    ],
+    "instructions": [
+      "Rozkvas: Vše smícháme v nádobě (sklenici), přikryjeme a asi za 8 hodin bude v teplé kuchyni rozkvas hotový. Odebereme 130 g do těsta a zbytek uložíme na příští pečení. Záparu: Semínka a vločky smícháme v misce, zalijeme vodou a přikryjeme. Záparu připravíme ve stejnou dobu jako rozkvas.",
+      "Vše uhněteme v robotu bez autolýzy. Jako první dáme do mísy rozkvas, zalijeme tekutinou, přidáme záparu, metličkou ručně promícháme. Až pak vsypeme prosátou mouku a sůl a kmín. Hněteme velmi krátce, kolem 6 minut.",
+      "Těsto je řídké, lepivé a zpevní se až překládáním. Neočekávejte hezkou kouli. Kdo nemáte zkušenosti, dejte poprvé raději jen 150 g kefíru. Celkové těsto kyne 3 hodiny.",
+      "Po vykynutí vyklopíme těsto na lehce pomoučený vál a stáčíme do požadovaného tvaru metodou přehazování jedné půlky na druhou (východ–západ, sever–jih). Ošatku důkladně vysypeme ošatkovou moukou, podhladíme bochničku a vložíme do ošatky. Vršek posypeme chlebovou moukou a uložíme do plastového boxu. Necháme cca 2 hodiny vykynout (22 °C). Kvůli vysoké hydrataci můžeme na závěr vložit na půl hodiny do mrazáku.",
+      "Pečeme ve studené remosce 45 minut. K pečení v troubě je vhodné použít nádobu."
+    ],
+    "prepTime": 30,
+    "cookTime": 45,
+    "servings": 1,
+    "author": ""
+  },
+  {
+    "id": "rohliky",
+    "title": "Rohlíky",
+    "categories": ["slané"],
+    "image": "default-image.webp",
+    "ingredients": [
+      "500 g hladké mouky",
+      "260 g vlažné vody",
+      "30 g sádla",
+      "2 čajové lžičky soli",
+      "20 g droždí",
+      "1 lžička cukru",
+      "posyp (dle chuti)"
+    ],
+    "instructions": [
+      "Vodu, droždí a cukr smícháme a necháme asi 15 minut vzejít kvásek.",
+      "Prosijeme mouku, přidáme ostatní suroviny a vypracujeme těsto.",
+      "Podsypeme moukou a necháme 30 minut kynout.",
+      "Rozdělíme na 80–90 g kousky a vytvarujeme rohlíky.",
+      "Na plechu necháme ještě 40 minut kynout.",
+      "Pečeme v troubě vyhřáté na 250 °C asi 15 minut (rohlíky pošplíchané vodou)."
+    ],
+    "prepTime": 25,
+    "cookTime": 15,
+    "servings": 9,
+    "author": ""
+  },
+  {
+    "id": "zrnckova-sumava",
+    "title": "Zrnčková šumava",
+    "categories": ["slané"],
+    "image": "default-image.webp",
+    "ingredientGroups": [
+      {
+        "name": "Rozkvas",
+        "items": [
+          "30 g pravidelně krmeného kvásku",
+          "120 g vody",
+          "150 g žitné chlebové mouky"
+        ]
+      },
+      {
+        "name": "Dále potřebujeme",
+        "items": [
+          "360 g vody",
+          "1 lžíce oleje",
+          "3 rovné lžičky soli",
+          "necelá lžička kmínu",
+          "lžíce lněného semínka",
+          "lžíce slunečnicových semínek",
+          "lžíce dýňového semínka",
+          "100 g žitné celozrnné mouky jemné",
+          "400 g pšeničné chlebové mouky",
+          "100 g hladké mouky"
+        ]
+      }
+    ],
+    "instructions": [
+      "Rozkvas: Vše dobře promícháme a zakryté necháme v teple 10–12 hodin kvasit.",
+      "K hotovému rozkvasu přidáme všechny zbývající suroviny a umícháme těsto. Posypeme troškou mouky, lehce zakryjeme a necháme vykynout 2–3 hodiny v teple.",
+      "Pak jemně propracujeme a uděláme bochník, který opět necháme vykynout v teple, v dobře moukou vysypané ošatce, přibližně 1–2 hodiny.",
+      "Vykynutý chléb opatrně vyklopíme na plech s pečicím papírem nebo fólií a upečeme ve vyhřáté troubě – vsadíme do 250 °C teplé trouby, hned teplotu zmírníme na 230 °C a pečeme 20 minut, poté dopečeme na 200 °C ještě 30 minut."
+    ],
+    "prepTime": 30,
+    "cookTime": 50,
+    "servings": 1,
+    "author": ""
   }
 ]
-
